@@ -21,11 +21,11 @@ def user_time_type():
     so I don't have to write it in main.'''
     placeholder_state = True
     while placeholder_state == True: # noqa
-        user_time_type_choice = input("Would you like the clock to be in 12 hour or 24 hour format? \n\n") # noqa
+        user_time_type_choice = input("Would you like the clock to be in 12 hour or 24 hour format? \n\n")
 
         if user_time_type_choice == "12":
             while True:
-                user_time_type_confirmation = input("Is 12 hour format correct? y/n \n") # noqa
+                user_time_type_confirmation = input("Is 12 hour format correct? y/n \n")
 
                 if user_time_type_confirmation == "y".lower():
                     print("\n12 hour format selected!")
@@ -42,7 +42,7 @@ def user_time_type():
 
         elif user_time_type_choice == "24":
             while True:
-                user_time_type_confirmation = input("Is 24 hour format okay? y/n \n").lower() # noqa
+                user_time_type_confirmation = input("Is 24 hour format okay? y/n \n").lower()
 
                 if user_time_type_confirmation == "y".lower():
                     print("\n24 hour format selected!")
@@ -56,9 +56,6 @@ def user_time_type():
 
                 else:
                     print("\nPlease enter y or n!")
-
-# TODO: Figure out how to make alarm timer repeatedly ask once it finishes, add an escape. # noqa
-
 
 def alarm_timer():
     '''The purpose of this is to take the time in minutes until the user
@@ -78,7 +75,7 @@ def time_plus_sleep(test_value):
     while True:
         if test_value == 12:
             localtime = time.localtime()
-            result = time.strftime("\nIt is currently %I:%M:%S %p EST", localtime) # noqa
+            result = time.strftime("\nIt is currently %I:%M:%S %p EST", localtime)
             print(result)
             time.sleep(60)
         else:
@@ -91,6 +88,5 @@ def time_plus_sleep(test_value):
 today = date.today()
 now = datetime.now()
 event = threading.Event()
-# alarm_timer()
 if __name__ == "__main__":
     main()
